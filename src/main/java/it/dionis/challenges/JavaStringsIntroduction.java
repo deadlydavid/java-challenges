@@ -12,6 +12,8 @@ public class JavaStringsIntroduction {
 	}
 
 	public static boolean isFirstLexiLarger(String first, String second) {
-		return true;
+		if (first == null) return false;
+		if (second == null) return true;
+		return (first.compareTo(second) > 0) ? true : false;
 	}
 }

@@ -33,4 +33,14 @@ public class JavaStringsIntroductionTest {
 	public void test_firstIsLexiSmaller_givesFalse() {
 		assertEquals(false, JavaStringsIntroduction.isFirstLexiLarger("Abc", "Rex"));
 	}
+
+	@Test
+	public void test_onlySecondStringIsNull_givesTrue() {
+		assertEquals(true, JavaStringsIntroduction.isFirstLexiLarger("Abc", null));
+	}
+
+	@Test
+	public void test_onlyFirstStringIsNull_givesFalse() {
+		assertEquals(false, JavaStringsIntroduction.isFirstLexiLarger(null, "Abc"));
+	}
 }
