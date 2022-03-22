@@ -16,4 +16,10 @@ public class JavaStringsIntroduction {
 		if (second == null) return true;
 		return (first.compareTo(second) > 0) ? true : false;
 	}
+
+	public static String capitalize(String input) {
+		Character firstChar = input.charAt(0);
+		String result = Character.toUpperCase(firstChar) + input.substring(1);
+		return result;
+	}
 }

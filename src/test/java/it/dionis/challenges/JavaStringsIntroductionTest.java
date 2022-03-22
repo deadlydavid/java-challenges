@@ -4,6 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+/**
+
+ */
 public class JavaStringsIntroductionTest {
 
 	@Test
@@ -42,5 +45,11 @@ public class JavaStringsIntroductionTest {
 	@Test
 	public void test_onlyFirstStringIsNull_givesFalse() {
 		assertEquals(false, JavaStringsIntroduction.isFirstLexiLarger(null, "Abc"));
+	}
+
+	@Test
+	public void test_lowerCaseString_isCapitalizedAtIndexZero() {
+		String result = JavaStringsIntroduction.capitalize("abcde");
+		assertEquals(true, Character.isUpperCase(result.charAt(0)));
 	}
 }
