@@ -48,6 +48,16 @@ public class JavaStringsIntroductionTest {
 	}
 
 	@Test
+	public void test_twoNullInputParameters_givesFalse() {
+		assertEquals(false, JavaStringsIntroduction.isFirstLexiLarger(null, null));
+	}
+
+	@Test
+	public void test_twoNullInputParameters_givesFalse2() {
+		assertEquals(true, JavaStringsIntroduction.isFirstLexiLarger(null, null));
+	}
+
+	@Test
 	public void test_lowerCaseString_isCapitalizedAtIndexZero() {
 		String result = JavaStringsIntroduction.capitalize("abcde");
 		assertEquals(true, Character.isUpperCase(result.charAt(0)));
